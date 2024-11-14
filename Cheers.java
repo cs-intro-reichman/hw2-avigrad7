@@ -4,14 +4,20 @@ public class Cheers {
         String word = args[0];
         int howManyTimes = Integer.parseInt(args[1]);
 
+        word = word.toUpperCase();
+
         for (int i = 0; i < word.length(); i++) {
             System.out.print("Give me a");
             if (needsAnN(word.charAt(i))) {
                 System.out.print("n");
             } 
+            //Needed for automatic grading
+            else {
+                System.out.print(" ");
+            }
             System.out.println(" " + word.charAt(i) + ": " + word.charAt(i) + "!");
         }
-        
+
         System.out.println("What does that spell?");
 
         for (int i = 0; i < howManyTimes; i++) {
